@@ -8,12 +8,12 @@ on:
 
 jobs:
   build:
-
     runs-on: alpine-latest
     steps:
     - uses: actions/checkout@v3
       with:
         submodules: recursive
+        
     - name: add
       run: sudo apk add --update alpine-sdk linux-headers git zlib-dev openssl-dev gperf cmake
     - name: mkdir build
